@@ -4,3 +4,4 @@
 **/*.tar.gz
 .idea/
 .DS_Store
+/OracleDatabase/SingleInstance/dockerfiles/mcan.tar

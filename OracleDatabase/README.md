@@ -18,3 +18,7 @@ docker run --name oracle_18_xe \
 -e ORACLE_CHARACTERSET=ISO-8859-1 \
 -v /d/pub/data/oradata:/opt/oracle/oradata \
 oracle/database:18.4.0-xe
+
+
+
+docker run --rm --volumes-from 1840-docker-compose_database_1 -v $(pwd):/backup ubuntu tar cvf /backup/mcan.tar /opt/oracle/oradata
