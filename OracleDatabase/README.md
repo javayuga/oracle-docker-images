@@ -6,3 +6,15 @@ Provides Docker build files to create an Oracle Database Single Instance Docker 
 
 ## RAC 
 Provides Docker build files to create an Oracle RAC Database docker image. For more details, see [RAC/README.md](./RAC/README.md).
+
+
+# Running locally
+
+docker run --name oracle_18_xe \
+-p 1521:1521 -p 5500:5500 \
+-e ORACLE_SID=xplorer \
+-e ORACLE_PDB=xplorer \
+-e ORACLE_PWD=xplorer \
+-e ORACLE_CHARACTERSET=ISO-8859-1 \
+-v /d/pub/data/oradata:/opt/oracle/oradata \
+oracle/database:18.4.0-xe

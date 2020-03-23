@@ -1,0 +1,15 @@
+version: '2'
+services:
+  database:
+    image: oracle/database:18.4.0-xe
+    volumes:
+      - oradata:/opt/oracle/oradata
+    ports:
+      - 1521:1521
+      - 8080:8080
+      - 5500:5500
+
+
+volumes:
+  oradata:
+
